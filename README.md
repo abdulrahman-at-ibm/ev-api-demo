@@ -22,10 +22,17 @@ Create the database:
 docker-compose run --rm web bash -c "rails db:create && rails db:migrate"
 ```
 
+Add seed data:
+```sh
+docker-compose run --rm web bash -c "rails db:seed"
+```
+
 ## Run the application
 ```sh
 docker-compose up
 ```
+
+Go to `http://localhost:3000/api/v1/vehicles`.
 
 ## How to run the test suite
 Install Rspec:
